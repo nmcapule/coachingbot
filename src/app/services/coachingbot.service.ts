@@ -176,10 +176,10 @@ export class CoachingBotService {
       return throwError(new Error(`unknown sprintId ${partial.sprintId}`));
     }
     if (partial.teamLeadId >= this.members.length) {
-      return throwError(new Error(`unknown sprintId ${partial.teamLeadId}`));
+      return throwError(new Error(`unknown partial.teamLeadId ${partial.teamLeadId}`));
     }
     if (partial.teamMemberId >= this.members.length) {
-      return throwError(new Error(`unknown sprintId ${partial.teamMemberId}`));
+      return throwError(new Error(`unknown partial.teamMemberId ${partial.teamMemberId}`));
     }
 
     this.feedbacks.push(feedback);

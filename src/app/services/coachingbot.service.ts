@@ -54,6 +54,12 @@ export class CoachingBotService {
   sprints: Sprint[] = [];
   feedbacks: Feedback[] = [];
 
+  reset() {
+    this.members = DEFAULT_MEMBERS;
+    this.sprints = [];
+    this.feedbacks = [];
+  }
+
   /** Creates a member. */
   addMember(partial: Partial<Member>): Observable<boolean> {
     const member: Member = {
